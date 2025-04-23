@@ -1,0 +1,69 @@
+{
+  "info": {
+    "name": "School API",
+    "_postman_id": "12345678-abcd-efgh-ijkl-1234567890ab",
+    "description": "Postman collection for School API endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Add School",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Example School\",\n  \"address\": \"123 Main St\",\n  \"latitude\": 37.7749,\n  \"longitude\": -122.4194\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/addSchool",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "addSchool"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List Schools",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/listSchools?latitude=37.7749&longitude=-122.4194",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "listSchools"
+          ],
+          "query": [
+            {
+              "key": "latitude",
+              "value": "37.7749"
+            },
+            {
+              "key": "longitude",
+              "value": "-122.4194"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
